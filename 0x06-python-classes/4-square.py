@@ -4,15 +4,15 @@
 
 class Square:
     """Size validation"""
-    def __init__(self, size=0):
-        self.__size = size
 
     @property
     def size(self):
-        self.__size = size
+        """getter func"""
+        return self.__size
 
     @size.setter
     def size(self, value):
+        """setter func"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:

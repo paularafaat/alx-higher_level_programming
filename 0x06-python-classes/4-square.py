@@ -8,12 +8,10 @@ class Square:
         self.__size = size
 
     @property
-    """getter func"""
     def size(self):
         self.__size = size
 
     @size.setter
-    """setter func"""
     def size(self, value):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")

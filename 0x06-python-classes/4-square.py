@@ -4,6 +4,9 @@
 
 class Square:
     """Size validation"""
+    def __init__(self, size=0):
+        """constructor"""
+        self.size = size
 
     @property
     def size(self):

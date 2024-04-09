@@ -1,0 +1,32 @@
+The ``5-text_indentation`` module
+================================
+
+using ``text_indentation``
+-------------------------
+
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Testing normal text
+    >>> text_indentation("hello paula")
+    hello paula
+
+Testing integer arg
+    >>> text_indentation(2)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Testing text
+    >>> text_indentation("Holberton.School")
+    Holberton.
+    <BLANKLINE>
+    School
+
+Testing BLANKLINE
+    >>> text_indentation("\n")
+    <BLANKLINE>
+
+Testing spaces
+    >>> text_indentation("   ?    ")
+    ?
+    <BLANKLINE>

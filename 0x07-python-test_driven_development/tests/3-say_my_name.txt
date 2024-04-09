@@ -1,0 +1,25 @@
+The ``3-say_my_name`` module
+============================
+
+using ``say_my_name``
+---------------------
+
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Testing if the args are string
+    >>> say_my_name("paula", "raafat")
+    My name is paula raafat
+
+Testing if the args are not string
+    >>> say_my_name(2, "raafat")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string or last_name must be a string
+
+Testing if the fisrt arg empty
+    >>> say_my_name("", "raafat")
+    My name is  raafat
+
+Testing if the secnod arg empty
+    >>> say_my_name("paula", "")
+    My name is paula 

@@ -1,0 +1,25 @@
+The ``0-add_integer`` module
+============================
+
+using ``add_integer``
+---------------------
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Testing normal one
+    >>> add_integer(23, 7)
+    30
+
+Testing one argumnet
+    >>> add_integer(2)
+    100
+
+Testing float argumnet
+    >>> add_integer(2, 2.5)
+    4
+
+Testing str argumnet
+    >>> add_integer("plah")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer

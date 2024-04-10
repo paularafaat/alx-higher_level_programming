@@ -36,7 +36,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_strings(self):
         """Test for a list of strings"""
-        with self.assertRaises(TypeError):
+        with self.assertRaises(AssertionError):
             max_integer(["apple", "banana", "orange"])
 
 

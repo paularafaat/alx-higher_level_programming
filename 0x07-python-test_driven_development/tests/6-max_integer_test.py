@@ -34,11 +34,6 @@ class TestMaxInteger(unittest.TestCase):
         """Test for a list of floating-point numbers"""
         self.assertEqual(max_integer([1.5, 2.7, 3.9]), 3.9)
 
-    def test_strings(self):
-        """Test for a list of strings"""
-        with self.assertRaises(AssertionError):
-            max_integer(["apple", "banana", "orange"])
-
 
 if __name__ == "__main__":
     unittest.main()

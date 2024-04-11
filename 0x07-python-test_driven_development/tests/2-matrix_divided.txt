@@ -70,3 +70,7 @@ Testing no argument
     Traceback (most recent call last):
         ...
     TypeError: div must be a number
+
+Testing float inf
+    >>> matrix_divided([[5, 2.5],[3, 9.3]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]

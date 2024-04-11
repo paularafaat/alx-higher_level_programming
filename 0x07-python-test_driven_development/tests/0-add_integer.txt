@@ -30,8 +30,15 @@ Testing str argumnet
         ...
     TypeError: a must be an integer
 
-Testing float argumnet
+Testing float NaN argumnet
     >>> add_integer(2, float('nan'))
     Traceback (most recent call last):
         ...
     ValueError: cannot convert float NaN to integer
+
+Testing floatoverflow
+    >>> big_number = 2**31122544 - 1
+    >>> add_integer(big_number, 2)
+    Traceback (most recent call last):
+        ...
+    ValueError: Exceeds the limit (4300) for integer string conversion; use sys.set_int_max_str_digits() to increase the limit

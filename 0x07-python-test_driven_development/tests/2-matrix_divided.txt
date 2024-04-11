@@ -52,3 +52,21 @@ Testing the size of each row
     Traceback (most recent call last):
         ...
     TypeError: Each row of the matrix must have the same size
+
+Testing one argument
+    >>> matrix_divided([[23, 23],[23, 34]], None)
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+Testing one argument
+    >>> matrix_divided(None, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Testing no argument
+    >>> matrix_divided(None, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number

@@ -66,10 +66,10 @@ Testing one argument
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Testing no argument
-    >>> matrix_divided(None, None)
+    >>> matrix_divided()
     Traceback (most recent call last):
         ...
-    TypeError: div must be a number
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
 Testing float inf
     >>> matrix_divided([[5, 2.5],[3, 9.3]], float('inf'))

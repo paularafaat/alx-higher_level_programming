@@ -40,3 +40,9 @@ Testing string arg
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+
+Testing division by string
+    >>> matrix_divided([[23, 23],[23, 34]], "hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number

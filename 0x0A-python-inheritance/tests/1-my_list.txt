@@ -9,6 +9,11 @@ using ``print_sorted``
 
 
 
+Testing type instance
+    >>> print(isinstance(my_list, Mylist))
+    True
+
+
 Testing empty list
     >>> my_list.print_sorted([])
     Traceback (most recent call last):

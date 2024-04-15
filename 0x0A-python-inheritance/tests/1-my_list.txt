@@ -1,0 +1,15 @@
+The ``1-my_list`` module
+============================
+
+using ``print_sorted``
+---------------------
+
+    >>> Mylist = __import__("1-my_list").Mylist
+    >>> print_sorted = Mylist.print_sorted
+
+Testing normal one
+    >>> print_sorted([1, 4, 2, 3, 5])
+    [1, 2, 3, 4, 5]
+
+
+Testing the 

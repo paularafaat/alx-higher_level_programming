@@ -16,7 +16,25 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 
-class Square(BaseGeometry):
+class Rectangle(BaseGeometry):
+    """class Rectangle"""
+    def __init__(self, width, height):
+        """constructor"""
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
+
+    def area(self):
+        """Calculate the area of the rectangle"""
+        return self.__width * self.__height
+
+    def __str__(self):
+        """String representation of the rectangle"""
+        return f"[Rectangle] {self.__width}/{self.__height}"
+
+
+class Square(Rectangle):
     """square class"""
     def __init__(self, size):
         """constructor"""

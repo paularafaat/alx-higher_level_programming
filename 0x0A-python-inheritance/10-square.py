@@ -39,7 +39,6 @@ class Square(BaseGeometry):
     def __init__(self, size):
         self.integer_validator("zize", size)
         self.__size = size
-        super().__init__(size, size)
 
     def area(self):
         """Calculate the area of the square"""

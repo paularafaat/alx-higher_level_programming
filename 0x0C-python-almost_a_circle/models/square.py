@@ -24,3 +24,14 @@ class Square(Rectangle):
         self.validate_attribute("width", value)
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Update attributes with arguments"""
+        if args:
+            attrs = ["id", "size", "x", "y"]
+            for i, attr in enumerate(attrs):
+                if i < len(args):
+                    setattr(self, attr, args[i])
+        for key, value in kwargs.items():
+            if key in ["id", "size", "x", "y"]:
+                setattr(self, key, value)

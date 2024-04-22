@@ -86,10 +86,9 @@ class Rectangle(Base):
                 f"{self.width}/{self.height}")
 
     def update(self, *args):
-        """update rectangle attributes with positional arguments"""
+        """Update attributes with arguments"""
+        attrs = ["id", "width", "height", "x", "y"]
 
-        self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]
+        for i, attr in enumerate(attrs):
+            if i < len(args):
+                setattr(self, attr, args[i])

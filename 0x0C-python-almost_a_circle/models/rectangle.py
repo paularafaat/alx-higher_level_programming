@@ -8,11 +8,11 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor"""
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -22,10 +22,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """setter for width"""
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+        self.validate_attribute("width", value)
         self.__width = value
 
     @property
@@ -36,10 +33,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """setter for height"""
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
+        self.validate_attribute("height", value)
         self.__height = value
 
     @property
@@ -50,10 +44,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """setter for x"""
-        if not isinstance(value, int):
-            raise TypeError("x must be an integer")
-        if value <= 0:
-            raise ValueError("x must be >= 0")
+        self.validate_attribute("x", value)
         self.__x = value
 
     @property
@@ -64,8 +55,16 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """setter for y"""
-        if not isinstance(value, int):
-            raise TypeError("y must be an integer")
-        if value <= 0:
-            raise ValueError("y must be >= 0")
+        self.validate_attribute("y", value)
         self.__y = value
+
+    def validate_attribute(self, name, value):
+        """validator for attributes"""
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+
+        if name in ["width", "height"] and value <= 0:
+            raise ValueError(f"{name} must be > 0")
+
+        if name in ["x", "y"] and value < 0:
+            raise ValueError(f"{name} must be >= 0")

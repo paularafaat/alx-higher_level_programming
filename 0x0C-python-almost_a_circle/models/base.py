@@ -28,7 +28,7 @@ class Base:
         """Save list of instances to JSON file"""
         if list_objs is not None:
             list_dicts = [obj.to_dictionary() for obj in list_objs]
-        json_string = cls.to_json_string(list_dicts)
-        file_name = f"{cls.__name__}.json"
+            json_string = cls.to_json_string(list_dicts)
+            file_name = f"{cls.__name__}.json"
         with open(file_name, "w", encoding="utf-8") as file:
             file.write(json_string)

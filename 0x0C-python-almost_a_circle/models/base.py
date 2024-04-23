@@ -41,7 +41,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Create and return instance with attributes set based on dictionary"""
+        """Create and return instance with
+        attributes set based on dictionary"""
         from models.rectangle import Rectangle
         from models.square import Square
         if cls.__name__ == "Rectangle":

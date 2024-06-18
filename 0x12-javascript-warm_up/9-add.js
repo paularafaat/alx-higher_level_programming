@@ -3,4 +3,5 @@ function add (a, b) {
   a = parseInt(a);
   b = parseInt(b);
   console.log(a + b);
+  return a + b;
 }

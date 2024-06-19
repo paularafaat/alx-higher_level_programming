@@ -8,3 +8,4 @@ function factorial (n) {
     console.log(result);
   }
 }
+factorial(process.argv[2]);

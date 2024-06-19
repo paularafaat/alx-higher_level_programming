@@ -1,7 +1,7 @@
 #!/usr/bin/node
 function factorial (n) {
   let result;
-  if (isNaN(n) || n === 0) {
+  if (isNaN(parseInt(n)) || n === 0) {
     result = 1;
   } else {
     result = n * factorial(n - 1);

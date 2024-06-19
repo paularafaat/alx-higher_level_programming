@@ -1,13 +1,12 @@
 #!/usr/bin/node
-const  Square = require('./6-square');
-class Square extends Square {
-
-  charPrint(c) {
+const square = require('./6-square');
+class Square extends square {
+  charPrint (c) {
     if (c === undefined) {
-        c = 'X';
+      c = 'X';
     }
     for (let i = 0; i < this.size; i++) {
-        console.log(c.repeat(this.size));
+      console.log(c.repeat(this.size));
     }
   }
 }

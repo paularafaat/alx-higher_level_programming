@@ -1,6 +1,7 @@
-#!/usr/bin/node
-const square = require('./6-square');
-class Square extends square {
+// 6-square.js
+const BaseSquare = require('./5-square');
+
+class Square extends BaseSquare {
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
@@ -10,4 +11,5 @@ class Square extends square {
     }
   }
 }
+
 module.exports = Square;

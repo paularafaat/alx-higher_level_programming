@@ -13,8 +13,7 @@ if __name__ == "__main__":
                 cities JOIN states ON states.id = cities.state_id
                 WHERE states.name = %s
                 ORDER BY cities.id ASC""", (state_name,))
-    rows = cur.fetchall()
-    for row in rows:
-        print(row[0], end=" ")
+    cities = cur.fetchall()
+    print(", ".join([city[0] for city in cities]))
     cur.close()
     conn.close()

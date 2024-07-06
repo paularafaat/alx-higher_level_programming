@@ -11,7 +11,7 @@ if __name__ == "__main__":
         q = ""
     url = 'http://0.0.0.0:5000/search_user'
     param = {'q': q}
-    res = requests.post(url, params=param)
+    res = requests.post(url, data=param)
     try:
         json_data = res.json()
         if json_data:
